@@ -40,7 +40,6 @@ public class Gradingapp {
 		}
 		for (int i = 0; i < studentSum.length; i++) {
 			System.out.println("The sum of student " + (i + 1) + " before curve is: ");
-			System.out.print(studentSum[i] + "\n");
 
 			String letterGrade="";
 			if (studentSum[i] >= 450) {
@@ -79,12 +78,12 @@ public class Gradingapp {
 		for (double num : studentSum) {
 			sum += num;
 		}
-
 		double mean = sum / length;
 
 		for (double num : studentSum) {
 			standardDeviation += Math.pow(num - mean, 2);
 		}
+		System.out.print(standardDeviation);
 		double SD = Math.sqrt(standardDeviation / length);
 		for (int i = 0; i < studentSum.length; i++) {
 			System.out.println("The sum of student " + (i + 1) + " after curve is: ");
